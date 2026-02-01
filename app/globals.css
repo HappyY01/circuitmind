@@ -1,0 +1,75 @@
+/* Import KaTeX CSS for math rendering */
+@import "katex/dist/katex.min.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --google-blue: #1a73e8;
+  --google-surface: #ffffff;
+  --google-background: #f8f9fa;
+  --google-text: #202124;
+  --google-text-secondary: #5f6368;
+  --google-border: #dadce0;
+  --google-hover: #e8f0fe;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: "Inter", "Roboto", system-ui, sans-serif;
+  background-color: var(--google-background);
+  color: var(--google-text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--google-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--google-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--google-text-secondary);
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid var(--google-blue);
+  outline-offset: 2px;
+}
+
+/* KaTeX styling adjustments */
+.katex {
+  font-size: 1.1em;
+}
+
+.katex-display {
+  margin: 1rem 0;
+}
